@@ -395,6 +395,18 @@ class Hand(tuple):
         """Return the hand in PBN format."""
         return ".".join(map(str, self))
 
+    def l1(self):
+        return sorted(list(map(lambda x:len(x), self.hand)))[0]
+
+    def l2(self):
+        return sorted(list(map(lambda x:len(x), self.hand)))[1]
+
+    def l3(self):
+        return sorted(list(map(lambda x:len(x), self.hand)))[2]
+
+    def l4(self):
+        return sorted(list(map(lambda x:len(x), self.hand)))[3]
+
     __str__ = _short_str
 
     @classmethod
